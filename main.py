@@ -97,7 +97,7 @@ async def on_message(message): # on_message() event : when the bot has recieved 
     if message.content == ".help" or message.content == ".도움말":
         embed = discord.Embed(title="EMTRAY 전적봇을 소개합니다!", description="이 도움말은 명령어와 봇 정보에 대해 간략하게 소개하고 있습니다. 명령어에 대해 상세히 알고 싶으시면 `.help commands` 또는 `.도움말 명령어` 를 사용해주세요.", color=0x0285FF)
         embed.add_field(name="`명령어`",
-                                value="`.ㅈ`  `.전적`  `.w`  `청소`  `clear`", inline=False)
+                                value="`.ㅈ`  `.전적`  `.w`", inline=False)
         embed.add_field(name="봇 초대링크",
                                 value="https://discord.com/api/oauth2/authorize?client_id=836446578301599815&permissions=8&scope=bot", inline=False)
         embed.add_field(name="EMTRAY 디스코드 서버",
@@ -110,33 +110,33 @@ async def on_message(message): # on_message() event : when the bot has recieved 
         embed = discord.Embed(title="EMTRAY 전적봇 명령어의 상세 정보입니다.", description="", color=0x0285FF)
         embed.add_field(name="`.ㅈ`  `.전적`  `.w`",
                                 value=".ㅈ <소환사 이름> , .전적 <소환사 이름> 또는 .w <소환사 이름> 을 사용해 소환사분들의 전적을 확인하실 수 있습니다!", inline=False)
-        embed.add_field(name="`.청소`  `.clear`",
-                                value=".청소 <갯수> 또는 .clear <갯수> 를 사용해 메시지를 청소하실 수 있습니다!", inline=False)
+
+
         embed.set_footer(text='EMTRAY LOL BOT BY EMTRAY#0002',
                          icon_url='https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/1385730/1a4d95bb4c09c9c8f1b421cdc2713c9a752cc8c1.gif')
         await message.channel.send("", embed=embed)
 
 
-    if message.content.startswith('.청소') or message.content.startswith('.clear'):
-	try:
-		amount = list_message[1]
-	except:
-		embed = discord.Embed(title="EMTRAY HELPER",description=".청소 <갯수> 또는 .clear <갯수> 로 사용하실수 있습니다.", color=0xFF0000)
-		await message.channel.send(embed=embed)
-		return
-	try:
-		await message.channel.purge(limit = int(amount))
-		embed = discord.Embed(title="청소!",description=str(message.author) + "에 의해" + amount + '개가 청소되었습니다.', color=0x0285FF)
-		await message.channel.send(embed=embed)
-		return
-	except discord.Forbidden:
-		embed = discord.Embed(title="EMTRAY HELPER",description=str(message.channel) + "의 권한이 부족합니다.\n '메세지 관리'권한을 부여해주세요.", color=0xFF0000)
-		await message.channel.send(embed=embed)
-		return
-	except:
-		embed = discord.Embed(title="EMTRAY HELPER",description="올바른 값을 입력하세요.", color=0xFF0000)
-		await message.channel.send(embed=embed)
-		return
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         
 
     if message.content.startswith(".전적") or message.content.startswith(".ㅈ") or message.content.startswith(".w"):

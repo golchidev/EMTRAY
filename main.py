@@ -95,14 +95,14 @@ async def on_message(message): # on_message() event : when the bot has recieved 
         return
 
     if message.content == ".help" or message.content == ".도움말":
-        embed = discord.Embed(title="EMTRAY 전적봇을 소개합니다!", description="이 도움말은 명령어와 봇 정보에 대해 간략하게 소개하고 있습니다. 명령어에 대해 상세히 알고 싶으시면 `.help commands` 또는 `.도움말 명령어` 를 사용해주세요.", color=0x0285FF)
+        embed = discord.Embed(title="EMTRAY 봇을 소개합니다!", description="이 도움말은 명령어와 봇 정보에 대해 간략하게 소개하고 있습니다. 명령어에 대해 상세히 알고 싶으시면 `.help commands` 또는 `.도움말 명령어` 를 사용해주세요.", color=0x0285FF)
         embed.add_field(name="`명령어`",
-                                value="`.ㅈ`  `.전적`  `.w`", inline=False)
+                                value="`.ㅈ`  `.전적`  `.w`  `.코로나`", inline=False)
         embed.add_field(name="봇 초대링크",
                                 value="https://discord.com/api/oauth2/authorize?client_id=836446578301599815&permissions=8&scope=bot", inline=False)
         embed.add_field(name="EMTRAY 디스코드 서버",
                                 value="https://discord.gg/ub8mf3hBaF", inline=False)
-        embed.set_footer(text='EMTRAY LOL BOT BY EMTRAY#0002',
+        embed.set_footer(text='EMTRAY BOT BY EMTRAY#0002',
                          icon_url='https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/1385730/1a4d95bb4c09c9c8f1b421cdc2713c9a752cc8c1.gif')
         await message.channel.send("", embed=embed)
 
@@ -110,34 +110,11 @@ async def on_message(message): # on_message() event : when the bot has recieved 
         embed = discord.Embed(title="EMTRAY 전적봇 명령어의 상세 정보입니다.", description="", color=0x0285FF)
         embed.add_field(name="`.ㅈ`  `.전적`  `.w`",
                                 value=".ㅈ <소환사 이름> , .전적 <소환사 이름> 또는 .w <소환사 이름> 을 사용해 소환사분들의 전적을 확인하실 수 있습니다!", inline=False)
-
-
-        embed.set_footer(text='EMTRAY LOL BOT BY EMTRAY#0002',
+        embed.add_field(name="`.코로나`",
+                                value="코로나 현황을 보실 수 있습니다!", inline=False)
+        embed.set_footer(text='EMTRAY BOT BY EMTRAY#0002',
                          icon_url='https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/1385730/1a4d95bb4c09c9c8f1b421cdc2713c9a752cc8c1.gif')
         await message.channel.send("", embed=embed)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
 
     if message.content.startswith(".전적") or message.content.startswith(".ㅈ") or message.content.startswith(".w"):
         try:
@@ -145,7 +122,7 @@ async def on_message(message): # on_message() event : when the bot has recieved 
                 embed = discord.Embed(title="소환사 이름을 입력해주세요", description="", color=0x0285FF)
                 embed.add_field(name="Please enter summoner name",
                                 value=".ㅈ <소환사 이름> 또는 .전적 <소환사 이름>", inline=False)
-                embed.set_footer(text='EMTRAY LOL BOT BY EMTRAY#0002',
+                embed.set_footer(text='EMTRAY BOT BY EMTRAY#0002',
                                  icon_url='https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/1385730/1a4d95bb4c09c9c8f1b421cdc2713c9a752cc8c1.gif')
                 await message.channel.send("", embed=embed)
             else:
@@ -195,7 +172,7 @@ async def on_message(message): # on_message() event : when the bot has recieved 
                     embed.add_field(name="Flex 5:5 Rank : Unranked", value="Unranked", inline=False)
                     embed.set_image(url='https:' + RankMedal[0]['src'])
                     embed.set_thumbnail(url="https://d1506sp6x4e9z7.cloudfront.net/gamasutra/uploads/1035771.png")
-                    embed.set_footer(text='EMTRAY LOL BOT BY EMTRAY#0002',
+                    embed.set_footer(text='EMTRAY LOL BY EMTRAY#0002',
                                      icon_url='https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/1385730/1a4d95bb4c09c9c8f1b421cdc2713c9a752cc8c1.gif')
                     await message.channel.send("", embed=embed)
 
@@ -222,7 +199,7 @@ async def on_message(message): # on_message() event : when the bot has recieved 
                                     inline=False)
                     embed.set_image(url='https:' + RankMedal[1]['src'])
                     embed.set_thumbnail(url="https://d1506sp6x4e9z7.cloudfront.net/gamasutra/uploads/1035771.png")
-                    embed.set_footer(text='EMTRAY LOL BOT BY EMTRAY#0002',
+                    embed.set_footer(text='EMTRAY LOL BY EMTRAY#0002',
                                      icon_url='https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/1385730/1a4d95bb4c09c9c8f1b421cdc2713c9a752cc8c1.gif')
                     await message.channel.send("", embed=embed)
 
@@ -250,7 +227,7 @@ async def on_message(message): # on_message() event : when the bot has recieved 
                                     inline=False)
                     embed.set_image(url='https:' + RankMedal[0]['src'])
                     embed.set_thumbnail(url="https://d1506sp6x4e9z7.cloudfront.net/gamasutra/uploads/1035771.png")
-                    embed.set_footer(text='EMTRAY LOL BOT BY EMTRAY#0002',
+                    embed.set_footer(text='EMTRAY BOT BY EMTRAY#0002',
                                      icon_url='https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/1385730/1a4d95bb4c09c9c8f1b421cdc2713c9a752cc8c1.gif')
                     await message.channel.send("", embed=embed)
                 # 두가지 유형의 랭크 모두 완료된사람
@@ -312,9 +289,57 @@ async def on_message(message): # on_message() event : when the bot has recieved 
         except AttributeError as e:
             embed = discord.Embed(title="존재하지 않는 소환사", description="", color=0xFF0000)
             embed.add_field(name="해당 닉네임의 소환사가 존재하지 않습니다.", value="소환사 이름을 확인해주세요", inline=False)
-            embed.set_footer(text='EMTRAY LOL BOT BY EMTRAY#0002',
+            embed.set_footer(text='EMTRAY BOT BY EMTRAY#0002',
                              icon_url='https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/1385730/1a4d95bb4c09c9c8f1b421cdc2713c9a752cc8c1.gif')
             await message.channel.send("Error : Non existing Summoner ", embed=embed)
+
+    if message.content.startswith(".코로나"):
+        # 보건복지부 코로나 바이러스 정보사이트"
+        covidSite = "http://ncov.mohw.go.kr/index.jsp"
+        covidNotice = "http://ncov.mohw.go.kr"
+        html = urlopen(covidSite)
+        bs = BeautifulSoup(html, 'html.parser')
+        latestupdateTime = bs.find('span', {'class': "livedate"}).text.split(',')[0][1:].split('.')
+        statisticalNumbers = bs.findAll('span', {'class': 'num'})
+        beforedayNumbers = bs.findAll('span', {'class': 'before'})
+
+        #주요 브리핑 및 뉴스링크
+        briefTasks = []
+        mainbrief = bs.findAll('a',{'href' : re.compile('\/tcmBoardView\.do\?contSeq=[0-9]*')})
+        for brf in mainbrief:
+            container = []
+            container.append(brf.text)
+            container.append(covidNotice + brf['href'])
+            briefTasks.append(container)
+        print(briefTasks)
+
+        # 통계수치
+        statNum = []
+        # 전일대비 수치
+        beforeNum = []
+        for num in range(7):
+            statNum.append(statisticalNumbers[num].text)
+        for num in range(4):
+            beforeNum.append(beforedayNumbers[num].text.split('(')[-1].split(')')[0])
+
+        totalPeopletoInt = statNum[0].split(')')[-1].split(',')
+        tpInt = ''.join(totalPeopletoInt)
+        lethatRate = round((int(statNum[3]) / int(tpInt)) * 100, 2)
+        embed = discord.Embed(title="Covid-19 Virus Korea Status", description="",color=0x5CD1E5)
+        embed.add_field(name="Data source : Ministry of Health and Welfare of Korea", value="http://ncov.mohw.go.kr/index.jsp", inline=False)
+        embed.add_field(name="Latest data refred time",value="해당 자료는 " + latestupdateTime[0] + "월 " + latestupdateTime[1] + "일 "+latestupdateTime[2] +" 자료입니다.", inline=False)
+        embed.add_field(name="확진환자(누적)", value=statNum[0].split(')')[-1]+"("+beforeNum[0]+")",inline=True)
+        embed.add_field(name="완치환자(격리해제)", value=statNum[1] + "(" + beforeNum[1] + ")", inline=True)
+        embed.add_field(name="치료중(격리 중)", value=statNum[2] + "(" + beforeNum[2] + ")", inline=True)
+        embed.add_field(name="사망", value=statNum[3] + "(" + beforeNum[3] + ")", inline=True)
+        embed.add_field(name="누적확진률", value=statNum[6], inline=True)
+        embed.add_field(name="치사율", value=str(lethatRate) + " %",inline=True)
+        embed.add_field(name="- 최신 브리핑 1 : " + briefTasks[0][0],value="Link : " + briefTasks[0][1],inline=False)
+        embed.add_field(name="- 최신 브리핑 2 : " + briefTasks[1][0], value="Link : " + briefTasks[1][1], inline=False)
+        embed.set_thumbnail(url="https://wikis.krsocsci.org/images/7/79/%EB%8C%80%ED%95%9C%EC%99%95%EA%B5%AD_%ED%83%9C%EA%B7%B9%EA%B8%B0.jpg")
+        embed.set_footer(text='EMTRAY BOT BY EMTRAY#0002',
+                         icon_url='https://avatars2.githubusercontent.com/u/45956041?s=460&u=1caf3b112111cbd9849a2b95a88c3a8f3a15ecfa&v=4')
+        await message.channel.send("s", embed=embed)
 
 
 keep_alive()
